@@ -82,6 +82,7 @@ function next() {
 
     const button = document.createElement("button");
     button.innerText = current === keys.length - 1 ? "提交" : "下一题";
+    button.style.fontSize = "25px";
     button.onclick = () => {
         const value = input.value;
         if (value.length === 0) {
@@ -174,6 +175,7 @@ async function submit() {
 
     const downloadButton = document.createElement("button");
     downloadButton.innerText = "下载结果";
+    downloadButton.style.fontSize = "25px";
     downloadButton.onclick = () => {
         const result = {
             "total-duration": totalDuration,
