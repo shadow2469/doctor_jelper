@@ -9,7 +9,7 @@ pathname = pathname.substring(0, pathname.lastIndexOf("/"));
 
 let current = 0;
 (async () => {
-    const response = await fetch(`${pathname}/res/data.json`);
+    const response = await fetch(`${pathname}/res/images.json`);
     data = await response.json();
     // Shuffle data.
     keys = Object.keys(data.mapping);
