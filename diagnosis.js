@@ -5,7 +5,7 @@ let userAnswers = {};
 
 let current = 0;
 (async () => {
-    const response = await fetch("/res/images.json");
+    const response = await fetch("./res/images.json");
     data = await response.json();
     // Shuffle data.
     keys = Object.keys(data.mapping);
@@ -25,7 +25,7 @@ function formattedTime(t) {
 
 function createImage(path) {
     const img = document.createElement("img");
-    img.src = `/res/images/${path}`;
+    img.src = `./res/images/${path}`;
     img.style.height = "360px";
     img.style.objectFit = "contain";
     return img;
@@ -99,7 +99,7 @@ async function submit() {
     document.getElementById("avg-time").innerText =
         formattedTime(averageDuration);
 
-    const response = await fetch("/res/answers.json");
+    const response = await fetch("./res/answers.json");
     const answers = await response.json();
 
     let correctCount = 0;
