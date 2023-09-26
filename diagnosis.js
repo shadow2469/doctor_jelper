@@ -45,8 +45,13 @@ function next() {
         time.innerText = formattedTime(duration);
     }, 1000);
 
+
     const key = keys[current];
     const container = document.getElementById("container");
+
+    const ID = document.getElementById("id");
+    ID.innerText = `${current + 1}/${keys.length}`;
+
     // Remove all children.
     while (container.firstChild) {
         container.removeChild(container.firstChild);
@@ -119,10 +124,13 @@ async function submit() {
     let enhancedCorrectCount = 0;
     for (let i = 0; i < keys.length; i++) {
         const key = keys[i];
-        const result = userAnswers[key];
-        const answer = answers[key];
-        if (result === answer) {
+        const result = userAnswers[key].toLowerCase();
+        const answer = answers[key].toLowerCase();
+        const is_correct = document.createElement("P");
+        is_correct.innerText = "答题情况：错误";
+        if (result === answer || (result.slice(1) === answer || result === answer.slice(1)) || result.slice(0, -1) === answer || result === answer.slice(0, -1)) {
             correctCount++;
+            is_correct.innerText = "答题情况：正确";
             if (data.enhanced[key]) {
                 enhancedCorrectCount++;
             } else {
@@ -142,6 +150,7 @@ async function submit() {
         container.appendChild(time);
         container.appendChild(user);
         container.appendChild(correct);
+        container.appendChild(is_correct);
 
         resultElement.appendChild(container);
     }
