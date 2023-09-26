@@ -1,0 +1,20 @@
+{
+    "origin": [
+        0,
+        1,
+        2
+    ],
+    "enhanced": [
+        30,
+        31,
+        32
+    ],
+    "mapping": {
+        "0": "origin/AMD_1.jpg",
+        "1": "origin/AMD_2.jpg",
+        "2": "origin/AMD_3.jpg",
+        "30": "enhanced/AMD_enhanced_1.jpg",
+        "31": "enhanced/AMD_enhanced_2.jpg",
+        "32": "enhanced/AMD_enhanced_3.jpg"
+    }
+}

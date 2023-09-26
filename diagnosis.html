@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="utf-8" />
+    <body>
+        <div
+            id="examination"
+            style="display: flex; flex-direction: column; align-items: center"
+        >
+            <div>
+                <span>答题时间：</span>
+                <span id="time">0:00</span>
+            </div>
+
+            <div
+                id="container"
+                style="
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 12px;
+                "
+            ></div>
+        </div>
+        <div
+            id="result"
+            style="display: none; flex-direction: column; align-items: center"
+        >
+            <div style="font-weight: 600">
+                <span>总答题时间：</span>
+                <span id="total-time"></span>
+            </div>
+            <div style="font-weight: 600">
+                <span>平均答题时间：</span>
+                <span id="avg-time"></span>
+            </div>
+            <div style="font-weight: 600">
+                <span>正确率：</span>
+                <span id="accuracy"></span>
+            </div>
+            <div style="font-weight: 600">
+                <span>增强图正确率：</span>
+                <span id="accuracy-e"></span>
+            </div>
+            <div style="font-weight: 600">
+                <span>原始图正确率：</span>
+                <span id="accuracy-o"></span>
+            </div>
+        </div>
+    </body>
+    <script src="diagnosis.js"></script>
+</html>
