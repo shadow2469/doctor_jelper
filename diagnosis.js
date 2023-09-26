@@ -55,12 +55,20 @@ function next() {
     const img = createImage(data.mapping[key]);
     container.appendChild(img);
 
+    const div = document.createElement("div");
+
+    const id = `answer-${current}`;
+    const label = document.createElement("label");
+    label.for = id;
+    label.innerText = "疾病的英文缩写：";
+    div.appendChild(label);
     const input = document.createElement("input");
     input.type = "text";
     input.name = "result";
     input.style.maxWidth = "500px";
-    inputs.push(input);
-    container.appendChild(input);
+    input.id = id;
+    div.appendChild(input);
+    container.appendChild(div);
 
     const button = document.createElement("button");
     button.innerText = current === keys.length - 1 ? "提交" : "下一题";
