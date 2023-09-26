@@ -3,9 +3,12 @@ let data = {};
 let keys = [];
 let userAnswers = {};
 
+const pathname = window.location.pathname;
+console.log(pathname);
+
 let current = 0;
 (async () => {
-    const response = await fetch("./res/images.json");
+    const response = await fetch(pathname + "/res/data.json");
     data = await response.json();
     // Shuffle data.
     keys = Object.keys(data.mapping);
