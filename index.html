@@ -7,12 +7,21 @@
         <link rel="stylesheet" href="index.css" />
     </head>
     <body>
-        <div style="color: gray; font-weight: 600; margin: 12px">
-            *
-            请认真阅读这些眼底疾病及其对应的英文缩写，这些英文缩写将用于输入疾病诊断的结果。
+        <div style="display: flex; flex-direction: column; align-items: center">
+            <div
+                style="
+                    color: gray;
+                    font-weight: 600;
+                    margin: 12px;
+                    font-size: 20px;
+                "
+            >
+                *
+                请认真阅读这些眼底疾病及其对应的英文缩写，这些英文缩写将用于输入疾病诊断的结果。
+            </div>
+            <div id="root"></div>
+            <button style="margin: 12px" onclick="nextPage()">开始答题</button>
         </div>
-        <div id="root"></div>
-        <button style="margin: 12px" onclick="nextPage()">开始答题</button>
         <script src="index.js"></script>
         <script>
             function nextPage() {

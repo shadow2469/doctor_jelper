@@ -30,7 +30,7 @@ function formattedTime(t) {
 function createImage(path) {
     const img = document.createElement("img");
     img.src = `${pathname}/res/images/${path}`;
-    img.style.height = "360px";
+    img.style.height = "640px";
     img.style.objectFit = "contain";
     return img;
 }
@@ -40,6 +40,7 @@ let timerId = null;
 let duration = 0;
 function next() {
     const time = document.getElementById("time");
+    time.style.fontSize = "25px"
     timerId = setInterval(() => {
         duration++;
         time.innerText = formattedTime(duration);
@@ -51,6 +52,7 @@ function next() {
 
     const ID = document.getElementById("id");
     ID.innerText = `${current + 1}/${keys.length}`;
+    ID.style.fontSize = "25px"
 
     // Remove all children.
     while (container.firstChild) {
@@ -66,11 +68,14 @@ function next() {
     const label = document.createElement("label");
     label.for = id;
     label.innerText = "疾病的英文缩写：";
+    label.style.fontSize = "25px";
     div.appendChild(label);
     const input = document.createElement("input");
     input.type = "text";
     input.name = "result";
     input.style.maxWidth = "500px";
+    input.style.height = "30px";
+    input.style.fontSize = "25px"
     input.id = id;
     div.appendChild(input);
     container.appendChild(div);

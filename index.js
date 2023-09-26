@@ -23,9 +23,29 @@ const diseaseInfo = {
     VHL: "Von Hippel-Lindau病",
 };
 
-let tableContent = "<table><tr><th>疾病</th><th>英文缩写</th></tr>";
+const table = document.createElement("table");
+table.style.fontSize = "35px";
+table.style.tableLayout = "fixed";
+const tr = document.createElement("tr");
+const th1 = document.createElement("th");
+th1.style.width = "70%";
+const th2 = document.createElement("th");
+th2.style.width = "30%";
+th1.innerHTML = "疾病";
+th2.innerHTML = "英文缩写";
+tr.appendChild(th1);
+tr.appendChild(th2);
+table.appendChild(tr);
 for (const key in diseaseInfo) {
-    tableContent += `<tr><td>${diseaseInfo[key]}</td><td>${key}</td></tr>`;
+    const tr = document.createElement("tr");
+    const td1 = document.createElement("td");
+    const td2 = document.createElement("td");
+    td2.style.textAlign = "center";
+    td2.style.verticalAlign = "middle";
+    td1.innerHTML = diseaseInfo[key];
+    td2.innerHTML = key;
+    tr.appendChild(td1);
+    tr.appendChild(td2);
+    table.appendChild(tr);
 }
-tableContent += "</table>";
-root.innerHTML = tableContent;
+root.appendChild(table);
