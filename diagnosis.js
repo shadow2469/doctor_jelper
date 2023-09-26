@@ -3,12 +3,13 @@ let data = {};
 let keys = [];
 let userAnswers = {};
 
-const pathname = window.location.pathname;
-console.log(pathname);
+let pathname = window.location.pathname;
+// Discard the last component of the path.
+pathname = pathname.substring(0, pathname.lastIndexOf("/"));
 
 let current = 0;
 (async () => {
-    const response = await fetch(pathname + "/res/data.json");
+    const response = await fetch(`${pathname}/res/data.json`);
     data = await response.json();
     // Shuffle data.
     keys = Object.keys(data.mapping);
@@ -28,7 +29,7 @@ function formattedTime(t) {
 
 function createImage(path) {
     const img = document.createElement("img");
-    img.src = `./res/images/${path}`;
+    img.src = `${pathname}/res/images/${path}`;
     img.style.height = "360px";
     img.style.objectFit = "contain";
     return img;
@@ -102,7 +103,7 @@ async function submit() {
     document.getElementById("avg-time").innerText =
         formattedTime(averageDuration);
 
-    const response = await fetch("./res/answers.json");
+    const response = await fetch(`${pathname}/res/answers.json`);
     const answers = await response.json();
 
     let correctCount = 0;
