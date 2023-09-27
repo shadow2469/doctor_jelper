@@ -1,0 +1,48 @@
+{
+    "origin": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+    ],
+    "enhanced": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+    ],
+    "mapping": {
+        "0": "origin/AMD_1.jpg",
+        "1": "origin/ARN_1.jpg",
+        "2": "origin/BRVO_1.jpg",
+        "3": "origin/CSC_1.jpg",
+        "4": "origin/DR_1.jpg",
+        "5": "origin/ERM_1.jpg",
+        "6": "origin/MH_1.jpg",
+        "7": "origin/Retinal Breaks_1.jpg",
+        "8": "origin/RP_1.jpg",
+        "9": "origin/VKH_1.jpg",
+        "10": "enhanced/AMD_enhanced_1.jpg",
+        "11": "enhanced/ARN_enhanced_1.jpg",
+        "12": "enhanced/BRVO_enhanced_1.jpg",
+        "13": "enhanced/CSC_enhanced_1.jpg",
+        "14": "enhanced/DR_enhanced_1.jpg",
+        "15": "enhanced/ERM_enhanced_1.jpg",
+        "16": "enhanced/MH_enhanced_1.jpg",
+        "17": "enhanced/Retinal Breaks_enhanced_1.jpg",
+        "18": "enhanced/RP_enhanced_1.jpg",
+        "19": "enhanced/VKH_enhanced_1.jpg"
+    }
+}
